@@ -23,7 +23,7 @@ import java.nio.ByteBuffer;
 /**
  * Simplistic {@link ByteBufAllocator} implementation that does not pool anything.
  */
-public final class UnpooledByteBufAllocator extends AbstractByteBufAllocator {
+public final class UnpooledByteBufAllocator extends AbstractByteBufAllocator implements ByteBufAllocatorMetric {
 
     private final LongCounter directCounter = PlatformDependent.newLongCounter();
     private final LongCounter heapCounter = PlatformDependent.newLongCounter();

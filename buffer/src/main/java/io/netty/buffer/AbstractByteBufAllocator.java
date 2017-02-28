@@ -238,20 +238,6 @@ public abstract class AbstractByteBufAllocator implements ByteBufAllocator {
      */
     protected abstract ByteBuf newDirectBuffer(int initialCapacity, int maxCapacity);
 
-    /**
-     * Returns the number of bytes of heap memory used by this {@link ByteBufAllocator} or {@code -1} if unknown.
-     */
-    public long usedHeapMemory() {
-        return -1;
-    }
-
-    /**
-     * Returns the number of bytes of direct memory used by this {@link ByteBufAllocator} or {@code -1} if unknown.
-     */
-    public long usedDirectMemory() {
-        return -1;
-    }
-
     @Override
     public String toString() {
         return StringUtil.simpleClassName(this) + "(directByDefault: " + directByDefault + ')';

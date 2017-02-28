@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class PooledByteBufAllocator extends AbstractByteBufAllocator {
+public class PooledByteBufAllocator extends AbstractByteBufAllocator implements ByteBufAllocatorMetric {
 
     private static final InternalLogger logger = InternalLoggerFactory.getInstance(PooledByteBufAllocator.class);
     private static final int DEFAULT_NUM_HEAP_ARENA;
